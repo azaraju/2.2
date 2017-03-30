@@ -1,0 +1,36 @@
+HDFS:hadoop distributed file system
+HDFS is Hadoop Distributed File System. HDFS is the primary distributed storage used by Hadoop applications. A HDFS cluster primarily
+consists of a NameNode that manages the file system metadata and DataNodes that store the actual data. HDFS holds very large amount of
+data and provides easier access. To store such huge data, the files are stored across multiple machines. These files are stored in
+redundant fashion to rescue the system from possible data losses in case of failure. HDFS also makes applications available to parallel
+processing.
+Hadoop features:
+1. It is suitable for the distributed storage and processing.
+2. Hadoop provides a command interface to interact with HDFS.
+3. The built-in servers of namenode and datanode help users to easily check the status of cluster.
+4. Streaming access to file system data.
+5. HDFS provides file permissions and authentication.
+Design of HDFS:
+HDFS has been designed keeping in view of the following features:
+1. Very large files: Files that are megabytes, gigabytes, terabytes, or petabytes of size.
+2. Streaming data access: HDFS is built around the idea that data is written once but
+   read many times. A dataset is copied from source and then analysis is done on that
+   dataset over time.
+3. Commodity hardware: Hadoop does not require expensive, highly reliable hardware
+   as it is designed to run on clusters of commodity hardware.
+
+
+Hadoop cluster... 
+A Hadoop cluster is a special type of computational cluster designed specifically for storing and analyzing huge amounts of unstructured
+data in a distributed computing environment. Hadoop clusters are known for boosting the speed of data analysis applications. They also are
+highly scalable: If a cluster's processing power is overwhelmed by growing volumes of data, additional cluster nodes can be added to
+increase throughput. Hadoop clusters also are highly resistant to failure because each piece of data is copied onto other cluster nodes,
+which ensures that the data is not lost if one node fails.
+
+Blocks of HDFS:
+When you store a file in HDFS, the system breaks it down into a set of individual blocks and stores these blocks in various slave nodes in
+the Hadoop cluster.The concept of storing a file as a collection of blocks is entirely consistent with how file systems normally work. But
+what’s different about HDFS is the scale. A typical block size that you’d see in a file system under Linux is 4KB, whereas a typical block
+size in Hadoop is 128MB. This value is configurable, and it can be customized, as both a new system default and a custom value for 
+individual files.Hadoop was designed to store data at the petabyte scale, where any potential limitations to scaling out are minimized.
+The high block size is a direct consequence of this need to store data on a massive scale.
